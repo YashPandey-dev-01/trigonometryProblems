@@ -31,7 +31,7 @@ function drawPoints(w) {
     const x = w.cirCentreX + w.cirRadius * Math.cos(radian);
     const y = w.cirCentreY + w.cirRadius * Math.sin(radian);
 
-    r.DrawCircle(x, y, w.pointRadius, r.BLACK);
+    r.DrawCircle(x, y, w.pointRadius, w.colorPalette.point);
   }
 }
 
@@ -39,7 +39,7 @@ function draw(w) {
   r.BeginDrawing();
   r.ClearBackground(r.WHITE);
 
-  r.DrawCircle(w.cirCentreX, w.cirCentreY, w.cirRadius, r.RED);
+  r.DrawCircle(w.cirCentreX, w.cirCentreY, w.cirRadius, w.colorPalette.circle);
   drawPoints(w);
 
   r.EndDrawing();
